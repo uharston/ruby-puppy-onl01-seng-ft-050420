@@ -7,28 +7,25 @@ class Dog
   def initialize(name)
     @name = name
     self.save
-
   end
 
   def self.all #class reader method
     @@all
   end
 
-  def self.print_all
+  def self.print_all #iterates through each instance and calls the .name instance 
     @@all.each do |dog|
       puts dog.name
     end
   end
+
   def self.clear_all
     @@all.clear
   end
-  def save
-  # @@all.each do |dog|
-  #   self.save
-  @@all << self
-#  end
-  end
 
+  def save
+    @@all << self
+  end
 
 end
 
